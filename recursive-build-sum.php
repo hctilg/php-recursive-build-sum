@@ -40,17 +40,13 @@ function findSum($a, &$used, $value, $index, $sum) {
 echo "please type the size of array : ";
 $n = (int)readline();
 
-$arr = [];
-$used = [];
-
 echo "type your array numbers: ";
 $numbers = preg_split('/\s+/', readline(), -1, PREG_SPLIT_NO_EMPTY);
 
-$arr = $numbers;
 $used = array_fill(0, $n, false);
 
 echo "please type your sum that we will try to build it with array numbers : ";
 $sum = (int)readline();
 
-sort($arr);
-findSum($arr, $used, $sum, $n - 1, $sum);
+sort($numbers);
+findSum($numbers, $used, $sum, $n - 1, $sum);
